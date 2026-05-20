@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Penalty Burger – handgemachte Smash Burger, knusprige Fries und eiskalte Drinks. Frisch, regional, mit Liebe gegrillt." />
+  <meta name="theme-color" content="#0c0c0e" />
+  <title>Penalty Burger – Volltreffer für deinen Hunger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>" />
+</head>
+<body>
+  <!-- ===== Preloader ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__burger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <p class="preloader__text">PENALTY&nbsp;BURGER</p>
+  </div>
+
+  <!-- ===== Progress bar ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-mark">⚽</span>
+      <span class="nav__logo-text">Penalty<strong>Burger</strong></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Hauptnavigation">
+      <a href="#story">Story</a>
+      <a href="#menu">Speisekarte</a>
+      <a href="#builder">Bau dir was</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#besuch">Besuch uns</a>
+      <a href="#order" class="nav__cta">Jetzt bestellen</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="blob blob--3"></div>
+        <div class="grain"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow" data-reveal>🔥 Frisch gesmasht · seit dem ersten Anpfiff</p>
+        <h1 class="hero__title">
+          <span class="line" data-reveal>JEDER BISSEN</span>
+          <span class="line outline" data-reveal>EIN VOLLTREFFER.</span>
+        </h1>
+        <p class="hero__sub" data-reveal>
+          Handgeformte Patties, geschmolzener Käse, ofenfrische Buns. Bei <strong>Penalty Burger</strong> verwandeln wir Hunger in Hattricks.
+        </p>
+        <div class="hero__actions" data-reveal>
+          <a href="#order" class="btn btn--primary">⚡ Jetzt bestellen</a>
+          <a href="#menu" class="btn btn--ghost">Speisekarte ansehen</a>
+        </div>
+        <div class="hero__stats" data-reveal>
+          <div class="stat"><span class="stat__num" data-count="100">0</span><span class="stat__label">% Rindfleisch</span></div>
+          <div class="stat"><span class="stat__num" data-count="14">0</span><span class="stat__label">Burger-Sorten</span></div>
+          <div class="stat"><span class="stat__num" data-count="9">0</span><span class="stat__label">Min. bis serviert</span></div>
+        </div>
+      </div>
+
+      <!-- Animated burger -->
+      <div class="hero__burger" id="heroBurger" aria-hidden="true">
+        <div class="steam"><span></span><span></span><span></span></div>
+        <div class="burger">
+          <div class="burger__layer bun-top"></div>
+          <div class="burger__layer lettuce"></div>
+          <div class="burger__layer tomato"></div>
+          <div class="burger__layer cheese"></div>
+          <div class="burger__layer patty"></div>
+          <div class="burger__layer bun-bottom"></div>
+        </div>
+        <div class="hero__plate"></div>
+      </div>
+
+      <a href="#story" class="scroll-cue" aria-label="Weiter scrollen">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>SMASH BURGER 🍔</span><span>CRISPY FRIES 🍟</span><span>MILKSHAKES 🥤</span>
+        <span>VEGAN OPTIONS 🌱</span><span>LOADED LOADED 🧀</span><span>HANDMADE 👐</span>
+        <span>SMASH BURGER 🍔</span><span>CRISPY FRIES 🍟</span><span>MILKSHAKES 🥤</span>
+        <span>VEGAN OPTIONS 🌱</span><span>LOADED LOADED 🧀</span><span>HANDMADE 👐</span>
+      </div>
+    </div>
+
+    <!-- ===== Story ===== -->
+    <section class="story section" id="story">
+      <div class="story__media" data-reveal>
+        <div class="story__card tilt">
+          <div class="story__emoji">🧑‍🍳</div>
+          <div class="story__badge">Est. Großaitingen</div>
+        </div>
+        <div class="story__deco" aria-hidden="true"></div>
+      </div>
+      <div class="story__text">
+        <p class="kicker" data-reveal>Unsere Story</p>
+        <h2 data-reveal>Vom Pausenkick zum <span class="hl">Geschmacks&shy;treffer</span>.</h2>
+        <p data-reveal>
+          Penalty Burger ist aus einer einfachen Idee entstanden: ein Burger, der so gut ist,
+          dass er jeden Elfmeter verwandelt. Wir smashen unsere Patties auf der heißen Platte,
+          backen unsere Buns täglich frisch und setzen auf regionale Zutaten – ohne Schnickschnack,
+          dafür mit jeder Menge Geschmack.
+        </p>
+        <ul class="story__list" data-reveal>
+          <li>🥩 100&nbsp;% frisches Rindfleisch, nie eingefroren</li>
+          <li>🍞 Täglich frisch gebackene Brioche-Buns</li>
+          <li>🌱 Vegane &amp; vegetarische Alternativen</li>
+          <li>♻️ Nachhaltige Verpackung &amp; regionale Lieferanten</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Menu ===== -->
+    <section class="menu section" id="menu">
+      <div class="section__head">
+        <p class="kicker" data-reveal>Speisekarte</p>
+        <h2 data-reveal>Wähl dein <span class="hl">Lieblings&shy;team</span>.</h2>
+        <p class="section__lead" data-reveal>Preise sind Platzhalter – bitte mit echten Werten ersetzen.</p>
+      </div>
+
+      <div class="menu__tabs" id="menuTabs" role="tablist" data-reveal>
+        <button class="menu__tab is-active" data-filter="all" role="tab">Alle</button>
+        <button class="menu__tab" data-filter="burger" role="tab">Burger</button>
+        <button class="menu__tab" data-filter="sides" role="tab">Sides</button>
+        <button class="menu__tab" data-filter="drinks" role="tab">Drinks</button>
+        <button class="menu__tab" data-filter="vegan" role="tab">Vegan</button>
+      </div>
+
+      <div class="menu__grid" id="menuGrid">
+        <!-- cards injected by JS -->
+      </div>
+    </section>
+
+    <!-- ===== Burger Builder ===== -->
+    <section class="builder section" id="builder">
+      <div class="section__head">
+        <p class="kicker" data-reveal>Interaktiv</p>
+        <h2 data-reveal>Bau dir deinen <span class="hl">Penalty</span>.</h2>
+        <p class="section__lead" data-reveal>Klick die Zutaten an und sieh deinem Burger beim Wachsen zu.</p>
+      </div>
+
+      <div class="builder__wrap">
+        <div class="builder__stage" data-reveal>
+          <div class="builder__stack" id="builderStack">
+            <div class="bld-layer bun-top"></div>
+            <div class="bld-layer bun-bottom"></div>
+          </div>
+          <div class="builder__price">
+            <span>Dein Preis</span>
+            <strong id="builderPrice">€&nbsp;5,90</strong>
+          </div>
+        </div>
+
+        <div class="builder__controls" data-reveal>
+          <p class="builder__hint">Basis: Brioche-Bun + Salat &nbsp;·&nbsp; <em>5,90&nbsp;€</em></p>
+          <div class="builder__chips" id="builderChips"></div>
+          <button class="btn btn--primary builder__add" id="builderAdd">In den Warenkorb legen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <section class="gallery section" id="galerie">
+      <div class="section__head">
+        <p class="kicker" data-reveal>Galerie</p>
+        <h2 data-reveal>Augen auf, <span class="hl">Sabber</span> an.</h2>
+      </div>
+      <div class="gallery__grid">
+        <figure class="gallery__item parallax-img" data-speed="0.06"><span>🍔</span></figure>
+        <figure class="gallery__item parallax-img" data-speed="0.1"><span>🍟</span></figure>
+        <figure class="gallery__item parallax-img" data-speed="0.04"><span>🥤</span></figure>
+        <figure class="gallery__item parallax-img" data-speed="0.12"><span>🧀</span></figure>
+        <figure class="gallery__item parallax-img" data-speed="0.07"><span>🌶️</span></figure>
+        <figure class="gallery__item parallax-img" data-speed="0.09"><span>🥓</span></figure>
+      </div>
+    </section>
+
+    <!-- ===== Order CTA ===== -->
+    <section class="order section" id="order">
+      <div class="order__inner" data-reveal>
+        <h2>Hunger? <span class="hl">Anpfiff!</span></h2>
+        <p>Bestell direkt zu dir nach Hause oder reserviere deinen Tisch. Lieferung im Umkreis von 8&nbsp;km.</p>
+        <div class="order__actions">
+          <a href="#" class="btn btn--primary" data-toast="Lieferdienst-Link hier einfügen (z.&nbsp;B. Lieferando / Wolt).">🛵 Liefern lassen</a>
+          <a href="#besuch" class="btn btn--ghost">🪑 Tisch reservieren</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Visit / Contact ===== -->
+    <section class="visit section" id="besuch">
+      <div class="visit__info">
+        <p class="kicker" data-reveal>Besuch uns</p>
+        <h2 data-reveal>Komm <span class="hl">vorbei</span>.</h2>
+
+        <ul class="visit__details" data-reveal>
+          <li><span class="visit__ic">📍</span>
+            <div><strong>Adresse</strong><br />Westendweg 4<br />86845 Großaitingen</div>
+          </li>
+          <li><span class="visit__ic">📞</span>
+            <div><strong>Telefon</strong><br /><a href="tel:+4917675776393">+49 176 75776393</a></div>
+          </li>
+          <li><span class="visit__ic">✉️</span>
+            <div><strong>E-Mail</strong><br /><a href="mailto:hasretsanli5@gmail.com">hasretsanli5@gmail.com</a></div>
+          </li>
+        </ul>
+
+        <div class="hours" data-reveal>
+          <strong>Öffnungszeiten <em>(Platzhalter)</em></strong>
+          <table>
+            <tr><td>Mo – Do</td><td>16:00 – 22:00</td></tr>
+            <tr><td>Fr – Sa</td><td>12:00 – 23:00</td></tr>
+            <tr class="is-today" id="todayRow"><td>Sonntag</td><td>12:00 – 22:00</td></tr>
+          </table>
+          <span class="hours__status" id="openStatus">Status wird geprüft …</span>
+        </div>
+      </div>
+
+      <form class="visit__form" id="reserveForm" novalidate data-reveal>
+        <h3>Tisch reservieren</h3>
+        <div class="field">
+          <input type="text" id="rName" name="name" required placeholder=" " />
+          <label for="rName">Name</label>
+        </div>
+        <div class="field">
+          <input type="email" id="rMail" name="email" required placeholder=" " />
+          <label for="rMail">E-Mail</label>
+        </div>
+        <div class="field field--row">
+          <div class="field">
+            <input type="date" id="rDate" name="date" required placeholder=" " />
+            <label for="rDate" class="label--static">Datum</label>
+          </div>
+          <div class="field">
+            <input type="number" id="rGuests" name="guests" min="1" max="20" value="2" required placeholder=" " />
+            <label for="rGuests" class="label--static">Personen</label>
+          </div>
+        </div>
+        <div class="field">
+          <textarea id="rMsg" name="message" rows="3" placeholder=" "></textarea>
+          <label for="rMsg">Nachricht (optional)</label>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Reservierung absenden</button>
+        <p class="form__note" id="formNote" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <span class="nav__logo-text">Penalty<strong>Burger</strong> ⚽</span>
+        <p>Handgemachte Burger aus Großaitingen. Frisch, ehrlich, ein Volltreffer.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#menu">Speisekarte</a>
+        <a href="#besuch">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram" data-toast="Instagram-Link einfügen">📷</a>
+        <a href="#" aria-label="Facebook" data-toast="Facebook-Link einfügen">👍</a>
+        <a href="#" aria-label="TikTok" data-toast="TikTok-Link einfügen">🎵</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> Penalty Burger · Alle Rechte vorbehalten.</span>
+      <span>Mit 🔥 gemacht.</span>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Nach oben">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
