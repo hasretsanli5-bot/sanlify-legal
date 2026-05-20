@@ -113,20 +113,20 @@
 
   /* ---------- Menu data + render ---------- */
   const MENU = [
-    { cat: "burger", emoji: "🍔", name: "Klassiker Penalty", price: "8,90", desc: "Smash-Patty, Cheddar, Salat, Tomate, hausgemachte Penalty-Sauce.", tags: ["Bestseller"] },
-    { cat: "burger", emoji: "🧀", name: "Double Cheese Strike", price: "11,50", desc: "Zwei Patties, doppelt Cheddar, karamellisierte Zwiebeln.", tags: [] },
-    { cat: "burger", emoji: "🥓", name: "Bacon Bomb", price: "12,90", desc: "Crispy Bacon, BBQ-Sauce, Röstzwiebeln, Cheddar.", tags: [] },
-    { cat: "burger", emoji: "🌶️", name: "El Diablo", price: "11,90", desc: "Jalapeños, Chili-Mayo, Pepper-Jack – nur für Mutige.", tags: ["scharf"], hot: true },
-    { cat: "burger", emoji: "🍗", name: "Crispy Chicken", price: "10,90", desc: "Knuspriges Hähnchen, Coleslaw, Honig-Senf.", tags: [] },
-    { cat: "vegan", emoji: "🌱", name: "Green Goal (vegan)", price: "10,50", desc: "Pflanzenpatty, vegane Mayo, Avocado, Rucola.", tags: ["vegan"], veg: true },
-    { cat: "vegan", emoji: "🍄", name: "Veggie Portobello", price: "9,90", desc: "Gegrillter Portobello, gegrillte Paprika, Pesto.", tags: ["vegetarisch"], veg: true },
-    { cat: "sides", emoji: "🍟", name: "Penalty Fries", price: "3,90", desc: "Knusprige Pommes mit Meersalz & Dip nach Wahl.", tags: [] },
-    { cat: "sides", emoji: "🧀", name: "Loaded Cheese Fries", price: "5,90", desc: "Pommes, Cheddar-Sauce, Bacon-Bits, Frühlingszwiebeln.", tags: [] },
-    { cat: "sides", emoji: "🧅", name: "Onion Rings", price: "4,50", desc: "Goldene Zwiebelringe im Bierteig.", tags: [] },
-    { cat: "sides", emoji: "🥗", name: "House Salad", price: "5,50", desc: "Frischer Blattsalat, Cherrytomaten, Dressing.", tags: ["vegetarisch"], veg: true },
-    { cat: "drinks", emoji: "🥤", name: "Hausgemachte Limo", price: "3,50", desc: "Zitrone-Minze oder Maracuja, frisch gemacht.", tags: [] },
-    { cat: "drinks", emoji: "🥛", name: "Milkshake", price: "4,90", desc: "Vanille, Schoko oder Erdbeere – cremig & kalt.", tags: [] },
-    { cat: "drinks", emoji: "🍺", name: "Craft Beer", price: "4,20", desc: "Wechselndes regionales Bier vom Fass.", tags: [] },
+    { cat: "burger", icon: "burger", name: "Klassiker Penalty", price: "8,90", desc: "Smash-Patty, Cheddar, Salat, Tomate, hausgemachte Penalty-Sauce.", tags: ["Bestseller"] },
+    { cat: "burger", icon: "cheese", name: "Double Cheese Strike", price: "11,50", desc: "Zwei Patties, doppelt Cheddar, karamellisierte Zwiebeln.", tags: [] },
+    { cat: "burger", icon: "bacon", name: "Bacon Bomb", price: "12,90", desc: "Crispy Bacon, BBQ-Sauce, Röstzwiebeln, Cheddar.", tags: [] },
+    { cat: "burger", icon: "chili", name: "El Diablo", price: "11,90", desc: "Jalapeños, Chili-Mayo, Pepper-Jack – nur für Mutige.", tags: ["scharf"], hot: true },
+    { cat: "burger", icon: "burger", name: "Crispy Chicken", price: "10,90", desc: "Knuspriges Hähnchen, Coleslaw, Honig-Senf.", tags: [] },
+    { cat: "vegan", icon: "leaf", name: "Green Goal (vegan)", price: "10,50", desc: "Pflanzenpatty, vegane Mayo, Avocado, Rucola.", tags: ["vegan"], veg: true },
+    { cat: "vegan", icon: "leaf", name: "Veggie Portobello", price: "9,90", desc: "Gegrillter Portobello, gegrillte Paprika, Pesto.", tags: ["vegetarisch"], veg: true },
+    { cat: "sides", icon: "fries", name: "Penalty Fries", price: "3,90", desc: "Knusprige Pommes mit Meersalz & Dip nach Wahl.", tags: [] },
+    { cat: "sides", icon: "fries", name: "Loaded Cheese Fries", price: "5,90", desc: "Pommes, Cheddar-Sauce, Bacon-Bits, Frühlingszwiebeln.", tags: [] },
+    { cat: "sides", icon: "cheese", name: "Onion Rings", price: "4,50", desc: "Goldene Zwiebelringe im Bierteig.", tags: [] },
+    { cat: "sides", icon: "leaf", name: "House Salad", price: "5,50", desc: "Frischer Blattsalat, Cherrytomaten, Dressing.", tags: ["vegetarisch"], veg: true },
+    { cat: "drinks", icon: "drink", name: "Hausgemachte Limo", price: "3,50", desc: "Zitrone-Minze oder Maracuja, frisch gemacht.", tags: [] },
+    { cat: "drinks", icon: "shake", name: "Milkshake", price: "4,90", desc: "Vanille, Schoko oder Erdbeere – cremig & kalt.", tags: [] },
+    { cat: "drinks", icon: "drink", name: "Craft Beer", price: "4,20", desc: "Wechselndes regionales Bier vom Fass.", tags: [] },
   ];
 
   const grid = $("#menuGrid");
@@ -143,7 +143,7 @@
         .join("");
       card.innerHTML = `
         <div class="menu-card__top">
-          <span class="menu-card__emoji">${m.emoji}</span>
+          <svg class="menu-card__svg" aria-hidden="true"><use href="#ic-${m.icon}"/></svg>
           <span class="menu-card__price">€&nbsp;${m.price}</span>
         </div>
         <h3>${m.name}</h3>
