@@ -214,6 +214,18 @@
     display:flex;gap:1rem;flex-wrap:wrap;
     opacity:0;animation:fadeUp 1s 1.4s forwards;
   }
+  .hero-contact{
+    margin-top:2rem;
+    display:flex;flex-wrap:wrap;gap:.7rem 2rem;align-items:center;
+    font-family:'JetBrains Mono',monospace;
+    font-size:.85rem;letter-spacing:.04em;
+    color:#e5e2dc;
+    opacity:0;animation:fadeUp 1s 1.6s forwards;
+  }
+  .hero-contact a{color:#e5e2dc;text-decoration:none;transition:color .25s}
+  .hero-contact a:hover{color:var(--accent)}
+  .hero-contact span span,
+  .hero-contact a span{color:var(--accent);margin-right:.45rem}
   .btn{
     padding:1rem 2rem;
     font-weight:700;
@@ -550,6 +562,7 @@
   html:not(.js) .hero-logo,
   html:not(.js) .hero-sub,
   html:not(.js) .hero-cta-row,
+  html:not(.js) .hero-contact,
   html:not(.js) h1 .line span,
   html:not(.js) .reveal{
     opacity:1 !important;
@@ -557,7 +570,7 @@
     animation:none !important;
   }
   @media (prefers-reduced-motion:reduce){
-    .hero-tag,.hero-logo,.hero-sub,.hero-cta-row,h1 .line span,.reveal{
+    .hero-tag,.hero-logo,.hero-sub,.hero-cta-row,.hero-contact,h1 .line span,.reveal{
       opacity:1 !important;transform:none !important;animation:none !important;
     }
     .slide{animation:none !important}
@@ -710,6 +723,12 @@
     <div class="hero-cta-row">
       <a href="#kontakt" class="btn btn-primary">Angebot anfragen <span class="arrow">→</span></a>
       <a href="#leistungen" class="btn btn-ghost">Unsere Leistungen</a>
+    </div>
+
+    <div class="hero-contact">
+      <a href="tel:+4982154398678"><span>☏</span> +49 (0) 821 / 543 98 678</a>
+      <a href="mailto:info@augsburg-abbruch.de"><span>✉</span> info@augsburg-abbruch.de</a>
+      <span class="hero-contact-addr"><span>⚲</span> Schäfflerbachstr. 12 · 86153 Augsburg</span>
     </div>
   </div>
 
