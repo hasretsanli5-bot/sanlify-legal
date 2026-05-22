@@ -497,6 +497,28 @@
     position:relative;z-index:1;
   }
   .cta-section h2{margin:0 auto 2rem;position:relative;z-index:1}
+  .contact-info{
+    position:relative;z-index:1;
+    margin-top:3rem;
+    display:flex;flex-direction:column;align-items:center;gap:1rem;
+  }
+  .contact-info address{
+    font-style:normal;line-height:1.6;color:#222;
+  }
+  .contact-info address strong{
+    font-family:'Anton',sans-serif;font-size:1.15rem;
+    letter-spacing:.04em;text-transform:uppercase;
+  }
+  .contact-links{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 2rem;
+    font-family:'JetBrains Mono',monospace;
+    font-size:.8rem;letter-spacing:.05em;
+  }
+  .contact-links a{
+    color:var(--accent);text-decoration:none;
+    border-bottom:1px solid transparent;transition:border-color .25s;
+  }
+  .contact-links a:hover{border-color:var(--accent)}
 
   /* ---------- Footer ---------- */
   footer{
@@ -560,7 +582,7 @@
     <li><a href="#prozess">Prozess</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
-  <a href="tel:082154398678" class="nav-cta">0821 543 98 678</a>
+  <a href="tel:+4982154398678" class="nav-cta">0821 / 543 98 678</a>
 </nav>
 
 <!-- HERO -->
@@ -946,8 +968,20 @@
     Kostenfreie Beratung, blitzschnelle Termine, termingerechte Arbeit. Rufen Sie uns an oder schreiben Sie uns eine kurze Nachricht — wir melden uns innerhalb von 24 Stunden.
   </p>
   <div class="hero-cta-row reveal" style="justify-content:center">
-    <a href="tel:082154398678" class="btn btn-primary">0821 543 98 678 <span class="arrow">→</span></a>
+    <a href="tel:+4982154398678" class="btn btn-primary">0821 / 543 98 678 <span class="arrow">→</span></a>
     <a href="mailto:info@augsburg-abbruch.de" class="btn" style="border:1px solid #000;color:#000">E-Mail senden</a>
+  </div>
+
+  <div class="contact-info reveal">
+    <address>
+      <strong>AUGSBURG ABBRUCH GmbH &amp; Co. KG</strong><br />
+      Schäfflerbachstr. 12 · 86153 Augsburg
+    </address>
+    <div class="contact-links">
+      <a href="tel:+4982154398678">Tel.: +49 (0) 821 / 543 98 678</a>
+      <a href="mailto:info@augsburg-abbruch.de">info@augsburg-abbruch.de</a>
+      <a href="https://www.instagram.com/augsburg_abbruch" target="_blank" rel="noopener">Instagram: @augsburg_abbruch</a>
+    </div>
   </div>
 </section>
 
@@ -955,7 +989,13 @@
 <footer>
   <div class="foot-inner">
     <img src="logo.png" alt="Augsburg Abbruch" style="height:60px;width:auto;filter:brightness(0) invert(1)" />
-    <small>© 2026 Augsburg Abbruch GmbH & Co. KG — Alle Rechte vorbehalten</small>
+    <div style="text-align:center;color:#999;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.06em;line-height:1.8">
+      Schäfflerbachstr. 12 · 86153 Augsburg<br />
+      <a href="tel:+4982154398678" style="color:#bbb;text-decoration:none">0821 / 543 98 678</a> ·
+      <a href="mailto:info@augsburg-abbruch.de" style="color:#bbb;text-decoration:none">info@augsburg-abbruch.de</a> ·
+      <a href="https://www.instagram.com/augsburg_abbruch" target="_blank" rel="noopener" style="color:#bbb;text-decoration:none">@augsburg_abbruch</a>
+    </div>
+    <small>© 2026 Augsburg Abbruch GmbH &amp; Co. KG — Alle Rechte vorbehalten</small>
   </div>
 </footer>
 
