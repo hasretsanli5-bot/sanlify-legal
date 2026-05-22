@@ -3,142 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Penalty Burger – handgemachte Smash Burger, knusprige Fries und eiskalte Drinks. Frisch, regional, mit Liebe gegrillt." />
-  <meta name="theme-color" content="#0c0c0e" />
-  <title>Penalty Burger – Volltreffer für deinen Hunger</title>
+  <meta name="description" content="TeamUp Gamer – finde Mitspieler auf deinem Skill-Level. Squad-Finder, LFG-Board, Voice-Lobbies und Turniere für deine Lieblingsgames." />
+  <meta name="theme-color" content="#08080d" />
+  <title>TeamUp Gamer – Finde dein Squad</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>" />
 </head>
 <body>
-  <!-- ===== Animated SVG sprite (moving food illustrations) ===== -->
+  <!-- ===== Animated SVG sprite (gaming icons) ===== -->
   <svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="gBun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3b95f"/><stop offset="1" stop-color="#cf8431"/></linearGradient>
-      <linearGradient id="gBunBtm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d18f43"/><stop offset="1" stop-color="#a5631f"/></linearGradient>
-      <linearGradient id="gFry" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd84d"/><stop offset="1" stop-color="#f3a712"/></linearGradient>
-      <linearGradient id="gShake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd1e0"/><stop offset="1" stop-color="#f48fb1"/></linearGradient>
+      <linearGradient id="gViolet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+      <linearGradient id="gCyan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#67e8f9"/><stop offset="1" stop-color="#0891b2"/></linearGradient>
+      <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe066"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+      <linearGradient id="gGreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#86efac"/><stop offset="1" stop-color="#16a34a"/></linearGradient>
+      <linearGradient id="gPink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9a8d4"/><stop offset="1" stop-color="#db2777"/></linearGradient>
     </defs>
 
-    <!-- BURGER -->
-    <symbol id="ic-burger" viewBox="0 0 100 100">
-      <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round">
-        <path d="M38 24 q-5 -6 0 -12 q5 -6 0 -12" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 4;0 -6;0 4" dur="2.6s" repeatCount="indefinite"/></path>
-        <path d="M50 22 q-5 -6 0 -12 q5 -6 0 -12" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.6s" begin=".8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 4;0 -6;0 4" dur="2.6s" begin=".8s" repeatCount="indefinite"/></path>
-        <path d="M62 24 q-5 -6 0 -12 q5 -6 0 -12" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.6s" begin="1.5s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 4;0 -6;0 4" dur="2.6s" begin="1.5s" repeatCount="indefinite"/></path>
+    <!-- CONTROLLER -->
+    <symbol id="ic-controller" viewBox="0 0 120 100">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -2.5;0 0" dur="4s" repeatCount="indefinite"/>
+        <path d="M30 30 h60 q18 0 24 26 q5 22 -8 30 q-12 7 -19 -6 l-6 -11 h-42 l-6 11 q-7 13 -19 6 q-13 -8 -8 -30 q6 -26 24 -26 Z" fill="url(#gViolet)" stroke="#e9d5ff" stroke-width="1.6"/>
+        <!-- d-pad -->
+        <g fill="#1b0b33">
+          <rect x="28" y="50" width="20" height="7" rx="2"/>
+          <rect x="34.5" y="43.5" width="7" height="20" rx="2"/>
+        </g>
+        <!-- action buttons -->
+        <circle cx="84" cy="44" r="4.4" fill="#67e8f9"><animate attributeName="opacity" values=".4;1;.4" dur="1.6s" repeatCount="indefinite"/></circle>
+        <circle cx="92" cy="52" r="4.4" fill="#f9a8d4"><animate attributeName="opacity" values=".4;1;.4" dur="1.6s" begin=".4s" repeatCount="indefinite"/></circle>
+        <circle cx="76" cy="52" r="4.4" fill="#86efac"><animate attributeName="opacity" values=".4;1;.4" dur="1.6s" begin=".8s" repeatCount="indefinite"/></circle>
+        <circle cx="84" cy="60" r="4.4" fill="#fde047"><animate attributeName="opacity" values=".4;1;.4" dur="1.6s" begin="1.2s" repeatCount="indefinite"/></circle>
+        <!-- sticks -->
+        <circle cx="50" cy="68" r="7" fill="#120726" stroke="#e9d5ff" stroke-width="1.4"/>
+        <circle cx="70" cy="68" r="7" fill="#120726" stroke="#e9d5ff" stroke-width="1.4"/>
+        <!-- center glow -->
+        <circle cx="60" cy="46" r="3" fill="#fff"><animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/></circle>
       </g>
+    </symbol>
+
+    <!-- TARGET / crosshair (FPS) -->
+    <symbol id="ic-target" viewBox="0 0 100 100">
+      <g fill="none" stroke="url(#gCyan)" stroke-width="3.4" stroke-linecap="round">
+        <circle cx="50" cy="50" r="26"><animate attributeName="r" values="24;28;24" dur="2.6s" repeatCount="indefinite"/></circle>
+        <circle cx="50" cy="50" r="6" stroke="url(#gViolet)"/>
+        <path d="M50 12 v14 M50 74 v14 M12 50 h14 M74 50 h14"/>
+      </g>
+      <circle cx="50" cy="50" r="2.6" fill="#67e8f9"><animate attributeName="opacity" values=".3;1;.3" dur="1.4s" repeatCount="indefinite"/></circle>
+    </symbol>
+
+    <!-- SWORD (MOBA/RPG) -->
+    <symbol id="ic-sword" viewBox="0 0 100 100">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="-4 50 50;4 50 50;-4 50 50" dur="3.4s" repeatCount="indefinite"/>
+        <path d="M70 18 l8 8 -34 34 -10 2 2 -10 Z" fill="url(#gCyan)" stroke="#e0f7ff" stroke-width="1.6"/>
+        <path d="M30 60 l10 10" stroke="#c084fc" stroke-width="5" stroke-linecap="round"/>
+        <path d="M24 66 l-8 8 m4 -12 l8 8" stroke="url(#gViolet)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="34" cy="56" r="2" fill="#fff"><animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/></circle>
+      </g>
+    </symbol>
+
+    <!-- ROCKET (Battle Royale / drop) -->
+    <symbol id="ic-rocket" viewBox="0 0 100 100">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 2;0 -3;0 2" dur="2.8s" repeatCount="indefinite"/>
+        <path d="M50 16 c14 10 18 28 14 44 h-28 c-4 -16 0 -34 14 -44 Z" fill="url(#gViolet)" stroke="#e9d5ff" stroke-width="1.6"/>
+        <circle cx="50" cy="40" r="6" fill="#67e8f9"/>
+        <path d="M36 52 l-10 12 12 -4 Z M64 52 l10 12 -12 -4 Z" fill="#c084fc"/>
+      </g>
+      <g fill="#fde047">
+        <path d="M44 62 q6 14 12 0 Z"><animate attributeName="opacity" values=".4;1;.4" dur=".7s" repeatCount="indefinite"/></path>
+        <circle cx="46" cy="78" r="2"><animate attributeName="cy" values="72;86" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.2s" repeatCount="indefinite"/></circle>
+        <circle cx="54" cy="80" r="1.6"><animate attributeName="cy" values="74;88" dur="1.4s" begin=".5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.4s" begin=".5s" repeatCount="indefinite"/></circle>
+      </g>
+    </symbol>
+
+    <!-- TROPHY -->
+    <symbol id="ic-trophy" viewBox="0 0 100 100">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="3s" repeatCount="indefinite"/>
+        <path d="M34 22 h32 v14 a16 16 0 0 1 -32 0 Z" fill="url(#gGold)" stroke="#fff3c4" stroke-width="1.6"/>
+        <path d="M34 26 h-10 a10 10 0 0 0 10 12 M66 26 h10 a10 10 0 0 1 -10 12" fill="none" stroke="url(#gGold)" stroke-width="3.4"/>
+        <rect x="46" y="50" width="8" height="12" fill="#f59e0b"/>
+        <path d="M36 68 h28 l-3 8 h-22 Z" fill="url(#gGold)"/>
+        <circle cx="50" cy="32" r="3" fill="#fff"><animate attributeName="opacity" values=".4;1;.4" dur="1.8s" repeatCount="indefinite"/></circle>
+      </g>
+    </symbol>
+
+    <!-- HEADSET (voice) -->
+    <symbol id="ic-headset" viewBox="0 0 100 100">
+      <g fill="none" stroke="url(#gViolet)" stroke-width="3.4" stroke-linecap="round">
+        <path d="M26 56 v-6 a24 24 0 0 1 48 0 v6"/>
+      </g>
+      <rect x="20" y="54" width="12" height="20" rx="6" fill="url(#gCyan)"/>
+      <rect x="68" y="54" width="12" height="20" rx="6" fill="url(#gCyan)"/>
+      <path d="M74 70 v6 a8 8 0 0 1 -8 8 h-10" fill="none" stroke="url(#gViolet)" stroke-width="3.4" stroke-linecap="round"/>
+      <circle cx="52" cy="84" r="3.4" fill="#86efac"><animate attributeName="opacity" values=".4;1;.4" dur="1.4s" repeatCount="indefinite"/></circle>
+    </symbol>
+
+    <!-- SHIELD (anti-cheat / tank) -->
+    <symbol id="ic-shield" viewBox="0 0 100 100">
+      <g>
+        <animateTransform attributeName="transform" type="scale" additive="sum" values="1;1.04;1" dur="2.6s" repeatCount="indefinite"/>
+        <path d="M50 16 l28 10 v22 c0 20 -14 30 -28 38 c-14 -8 -28 -18 -28 -38 V26 Z" fill="url(#gViolet)" stroke="#e9d5ff" stroke-width="1.6"/>
+        <path d="M38 50 l8 9 18 -20" fill="none" stroke="#67e8f9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><animate attributeName="stroke-dasharray" values="0 40;40 0" dur="2s" repeatCount="indefinite"/></path>
+      </g>
+    </symbol>
+
+    <!-- BOLT (fast matchmaking) -->
+    <symbol id="ic-bolt" viewBox="0 0 100 100">
+      <path d="M56 14 L30 56 h16 l-6 30 30 -44 h-18 Z" fill="url(#gGold)" stroke="#fff3c4" stroke-width="1.6">
+        <animate attributeName="opacity" values=".6;1;.6" dur="1.2s" repeatCount="indefinite"/>
+      </path>
+    </symbol>
+
+    <!-- USERS (squad) -->
+    <symbol id="ic-users" viewBox="0 0 100 100">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="3.2s" repeatCount="indefinite"/>
+        <circle cx="38" cy="40" r="11" fill="url(#gViolet)"/>
+        <path d="M20 74 a18 18 0 0 1 36 0 Z" fill="url(#gViolet)"/>
+        <circle cx="66" cy="44" r="9" fill="url(#gCyan)"/>
+        <path d="M52 74 a14 14 0 0 1 28 0 Z" fill="url(#gCyan)"/>
+      </g>
+    </symbol>
+
+    <!-- CHAT (LFG board / discord) -->
+    <symbol id="ic-chat" viewBox="0 0 100 100">
       <g>
         <animateTransform attributeName="transform" type="translate" values="0 0;0 -2.5;0 0" dur="3s" repeatCount="indefinite"/>
-        <path d="M16 48 Q50 14 84 48 Z" fill="url(#gBun)"/>
-        <g fill="#fff4d9">
-          <ellipse cx="40" cy="40" rx="2.4" ry="1.3" transform="rotate(-18 40 40)"><animate attributeName="opacity" values=".35;1;.35" dur="2.5s" repeatCount="indefinite"/></ellipse>
-          <ellipse cx="52" cy="34" rx="2.4" ry="1.3"><animate attributeName="opacity" values=".35;1;.35" dur="2.5s" begin=".6s" repeatCount="indefinite"/></ellipse>
-          <ellipse cx="62" cy="40" rx="2.4" ry="1.3" transform="rotate(18 62 40)"><animate attributeName="opacity" values=".35;1;.35" dur="2.5s" begin="1.1s" repeatCount="indefinite"/></ellipse>
-          <ellipse cx="49" cy="44" rx="2.2" ry="1.2"><animate attributeName="opacity" values=".35;1;.35" dur="2.5s" begin="1.6s" repeatCount="indefinite"/></ellipse>
+        <path d="M22 30 h56 a8 8 0 0 1 8 8 v24 a8 8 0 0 1 -8 8 H44 l-14 12 v-12 h-8 a8 8 0 0 1 -8 -8 V38 a8 8 0 0 1 8 -8 Z" fill="url(#gCyan)" stroke="#e0f7ff" stroke-width="1.6"/>
+        <g fill="#0e2a33">
+          <circle cx="40" cy="50" r="3.4"><animate attributeName="opacity" values=".3;1;.3" dur="1.2s" repeatCount="indefinite"/></circle>
+          <circle cx="52" cy="50" r="3.4"><animate attributeName="opacity" values=".3;1;.3" dur="1.2s" begin=".3s" repeatCount="indefinite"/></circle>
+          <circle cx="64" cy="50" r="3.4"><animate attributeName="opacity" values=".3;1;.3" dur="1.2s" begin=".6s" repeatCount="indefinite"/></circle>
         </g>
-        <path d="M15 48 h70 v3 q-7 5 -14 0 q-7 5 -14 0 q-7 5 -14 0 q-7 5 -14 0 q-7 5 -14 0 Z" fill="#5cb85c"/>
-        <path d="M19 53 h62 v3 l-7 5 -6 -5 -6 5 -6 -5 -6 5 -6 -5 -6 5 -7 -5 Z" fill="#ffce3a"/>
-        <rect x="16" y="60" width="68" height="13" rx="6.5" fill="#5e351c"/>
-        <path d="M18 73 q32 12 64 0 l-3 6 q-29 8 -58 0 Z" fill="url(#gBunBtm)"/>
       </g>
     </symbol>
 
-    <!-- FRIES -->
-    <symbol id="ic-fries" viewBox="0 0 100 100">
-      <g fill="url(#gFry)" stroke="#d98c0a" stroke-width="1">
-        <rect x="33" y="30" width="6" height="40" rx="2"/>
-        <rect x="42" y="22" width="6" height="48" rx="2"><animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="2.4s" repeatCount="indefinite"/></rect>
-        <rect x="51" y="26" width="6" height="44" rx="2"/>
-        <rect x="60" y="20" width="6" height="50" rx="2"><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="2.4s" begin="1s" repeatCount="indefinite"/></rect>
-        <rect x="67" y="32" width="6" height="38" rx="2"/>
-      </g>
-      <path d="M29 58 h46 l-5 28 a4 4 0 0 1 -4 3 h-28 a4 4 0 0 1 -4 -3 Z" fill="#e23b2e"/>
-      <path d="M29 58 h46 v6 h-46 Z" fill="#c62828"/>
-      <rect x="46" y="66" width="12" height="14" rx="2" fill="#fff" opacity=".9"/>
-    </symbol>
-
-    <!-- SHAKE -->
-    <symbol id="ic-shake" viewBox="0 0 100 100">
-      <rect x="55" y="14" width="5" height="42" rx="2.5" fill="#e23b2e" transform="rotate(13 57 35)"/>
-      <path d="M30 40 q20 -16 40 0 Z" fill="url(#gShake)"/>
-      <circle cx="50" cy="25" r="5" fill="#e23b2e"/>
-      <path d="M32 40 h36 l-5 44 a4 4 0 0 1 -4 3 h-18 a4 4 0 0 1 -4 -3 Z" fill="#ffffff"/>
-      <path d="M34 42 h32 l-1.5 13 q-15 5 -29 0 Z" fill="url(#gShake)"/>
-      <g fill="#fff" opacity=".85">
-        <circle cx="44" cy="60" r="2.4"><animate attributeName="cy" values="62;47" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="2.4s" repeatCount="indefinite"/></circle>
-        <circle cx="55" cy="64" r="2"><animate attributeName="cy" values="66;49" dur="2.6s" begin=".8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="2.6s" begin=".8s" repeatCount="indefinite"/></circle>
-        <circle cx="49" cy="66" r="1.6"><animate attributeName="cy" values="68;51" dur="2.2s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="2.2s" begin="1.4s" repeatCount="indefinite"/></circle>
-      </g>
-    </symbol>
-
-    <!-- CHEESE -->
-    <symbol id="ic-cheese" viewBox="0 0 100 100">
+    <!-- MEDAL (rank/ladder) -->
+    <symbol id="ic-medal" viewBox="0 0 100 100">
       <g>
-        <animateTransform attributeName="transform" type="rotate" values="-3 50 55;3 50 55;-3 50 55" dur="4s" repeatCount="indefinite"/>
-        <path d="M22 66 L72 36 q8 -5 10 4 L34 78 q-6 4 -12 -2 Z" fill="url(#gFry)" stroke="#d98c0a" stroke-width="1"/>
-        <circle cx="42" cy="60" r="4" fill="#e8a200"/>
-        <circle cx="56" cy="54" r="3" fill="#e8a200"/>
-        <circle cx="50" cy="67" r="2.4" fill="#e8a200"/>
-        <circle cx="33" cy="80" r="3" fill="url(#gFry)"><animate attributeName="cy" values="80;90" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0" dur="2.6s" repeatCount="indefinite"/></circle>
-      </g>
-    </symbol>
-
-    <!-- CHILI -->
-    <symbol id="ic-chili" viewBox="0 0 100 100">
-      <g>
-        <animateTransform attributeName="transform" type="rotate" values="-6 50 52;6 50 52;-6 50 52" dur="3s" repeatCount="indefinite"/>
-        <path d="M60 30 c16 4 21 24 12 40 c-8 14 -28 18 -36 9 c-7 -8 -1 -19 9 -18 c11 1 16 -9 11 -21 c-2 -5 0 -8 4 -9 Z" fill="#d8261a"/>
-        <path d="M60 38 q10 8 7 26" fill="none" stroke="#ff8576" stroke-width="3" stroke-linecap="round" opacity=".7"/>
-        <path d="M60 30 q-3 -9 6 -11" fill="none" stroke="#3f9e3f" stroke-width="4.5" stroke-linecap="round"/>
-      </g>
-    </symbol>
-
-    <!-- BACON -->
-    <symbol id="ic-bacon" viewBox="0 0 100 100">
-      <g>
-        <animateTransform attributeName="transform" type="translate" values="0 -2;0 2;0 -2" dur="2.6s" repeatCount="indefinite"/>
-        <path d="M18 42 q12 -10 24 0 t24 0 t16 0 v11 q-8 9 -16 0 t-24 0 t-24 0 Z" fill="#b5402f"/>
-        <path d="M18 42 q12 -10 24 0 t24 0 t16 0" fill="none" stroke="#e7a08f" stroke-width="4"/>
-      </g>
-      <g>
-        <animateTransform attributeName="transform" type="translate" values="0 2;0 -2;0 2" dur="2.6s" repeatCount="indefinite"/>
-        <path d="M18 60 q12 -10 24 0 t24 0 t16 0 v11 q-8 9 -16 0 t-24 0 t-24 0 Z" fill="#a5392b"/>
-        <path d="M18 60 q12 -10 24 0 t24 0 t16 0" fill="none" stroke="#e7a08f" stroke-width="4"/>
-      </g>
-    </symbol>
-
-    <!-- LEAF (vegan/salad) -->
-    <symbol id="ic-leaf" viewBox="0 0 100 100">
-      <g>
-        <animateTransform attributeName="transform" type="rotate" values="-5 50 60;5 50 60;-5 50 60" dur="3.5s" repeatCount="indefinite"/>
-        <path d="M30 80 C18 50 40 22 78 22 C78 60 56 82 30 80 Z" fill="#4caf50"/>
-        <path d="M30 80 C42 56 58 40 74 30" fill="none" stroke="#2e7d32" stroke-width="3" stroke-linecap="round"/>
-        <path d="M46 62 l11 -7 M52 52 l11 -7 M40 71 l9 -6" stroke="#2e7d32" stroke-width="2" fill="none" stroke-linecap="round"/>
-      </g>
-    </symbol>
-
-    <!-- DRINK (soda) -->
-    <symbol id="ic-drink" viewBox="0 0 100 100">
-      <rect x="56" y="14" width="5" height="40" rx="2.5" fill="#36d399" transform="rotate(14 58 34)"/>
-      <path d="M34 36 h32 l-4 47 a4 4 0 0 1 -4 4 h-16 a4 4 0 0 1 -4 -4 Z" fill="#bfe8ff" opacity=".6"/>
-      <path d="M35 50 h30 l-3 33 a4 4 0 0 1 -4 4 h-16 a4 4 0 0 1 -4 -4 Z" fill="#ff8a3d"/>
-      <ellipse cx="50" cy="36" rx="16" ry="4" fill="#dff3ff"/>
-      <g fill="#fff">
-        <circle cx="45" cy="60" r="1.8"><animate attributeName="cy" values="64;51" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/></circle>
-        <circle cx="54" cy="64" r="1.5"><animate attributeName="cy" values="68;53" dur="2.3s" begin=".6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="2.3s" begin=".6s" repeatCount="indefinite"/></circle>
-        <circle cx="49" cy="66" r="1.3"><animate attributeName="cy" values="70;55" dur="1.8s" begin="1.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="1.8s" begin="1.1s" repeatCount="indefinite"/></circle>
+        <animateTransform attributeName="transform" type="rotate" values="-3 50 56;3 50 56;-3 50 56" dur="3.6s" repeatCount="indefinite"/>
+        <path d="M40 18 l10 22 -10 0 -8 -16 Z M60 18 l-10 22 10 0 8 -16 Z" fill="url(#gPink)"/>
+        <circle cx="50" cy="60" r="20" fill="url(#gGold)" stroke="#fff3c4" stroke-width="1.6"/>
+        <path d="M50 49 l4 8 9 1 -6.5 6 1.5 9 -8 -4 -8 4 1.5 -9 -6.5 -6 9 -1 Z" fill="#fff" opacity=".9"/>
       </g>
     </symbol>
   </svg>
 
   <!-- ===== Preloader ===== -->
   <div class="preloader" id="preloader">
-    <div class="preloader__burger" aria-hidden="true">
-      <span></span><span></span><span></span>
+    <div class="preloader__bars" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
     </div>
-    <p class="preloader__text">PENALTY&nbsp;BURGER</p>
+    <p class="preloader__text">TEAMUP&nbsp;GAMER</p>
   </div>
 
   <!-- ===== Progress bar ===== -->
@@ -147,16 +170,15 @@
   <!-- ===== Header / Nav ===== -->
   <header class="nav" id="nav">
     <a href="#hero" class="nav__logo">
-      <span class="nav__logo-mark">⚽</span>
-      <span class="nav__logo-text">Penalty<strong>Burger</strong></span>
+      <span class="nav__logo-mark" aria-hidden="true">🎮</span>
+      <span class="nav__logo-text">TeamUp<strong>Gamer</strong></span>
     </a>
     <nav class="nav__links" id="navLinks" aria-label="Hauptnavigation">
-      <a href="#story">Story</a>
-      <a href="#menu">Speisekarte</a>
-      <a href="#builder">Bau dir was</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#besuch">Besuch uns</a>
-      <a href="#order" class="nav__cta">Jetzt bestellen</a>
+      <a href="#how">So funktioniert's</a>
+      <a href="#games">Spiele</a>
+      <a href="#finder">Squad-Finder</a>
+      <a href="#community">Community</a>
+      <a href="#join" class="nav__cta">Jetzt starten</a>
     </nav>
     <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -170,44 +192,39 @@
         <div class="blob blob--1"></div>
         <div class="blob blob--2"></div>
         <div class="blob blob--3"></div>
+        <div class="grid-fx"></div>
         <div class="grain"></div>
       </div>
 
       <div class="hero__content">
-        <p class="hero__eyebrow" data-reveal>🔥 Frisch gesmasht · seit dem ersten Anpfiff</p>
+        <p class="hero__eyebrow" data-reveal>🎮 50.000+ Gamer · Matchmaking in Sekunden</p>
         <h1 class="hero__title">
-          <span class="line" data-reveal>JEDER BISSEN</span>
-          <span class="line outline" data-reveal>EIN VOLLTREFFER.</span>
+          <span class="line" data-reveal>FINDE DEIN</span>
+          <span class="line outline" data-reveal>SQUAD.</span>
         </h1>
         <p class="hero__sub" data-reveal>
-          Handgeformte Patties, geschmolzener Käse, ofenfrische Buns. Bei <strong>Penalty Burger</strong> verwandeln wir Hunger in Hattricks.
+          Schluss mit Solo-Queue-Frust. <strong>TeamUp Gamer</strong> matcht dich mit Mitspielern auf deinem Skill-Level – im richtigen Game, zur richtigen Zeit.
         </p>
         <div class="hero__actions" data-reveal>
-          <a href="#order" class="btn btn--primary">⚡ Jetzt bestellen</a>
-          <a href="#menu" class="btn btn--ghost">Speisekarte ansehen</a>
+          <a href="#finder" class="btn btn--primary">⚡ Squad finden</a>
+          <a href="#how" class="btn btn--ghost">So funktioniert's</a>
         </div>
         <div class="hero__stats" data-reveal>
-          <div class="stat"><span class="stat__num" data-count="100">0</span><span class="stat__label">% Rindfleisch</span></div>
-          <div class="stat"><span class="stat__num" data-count="14">0</span><span class="stat__label">Burger-Sorten</span></div>
-          <div class="stat"><span class="stat__num" data-count="9">0</span><span class="stat__label">Min. bis serviert</span></div>
+          <div class="stat"><span class="stat__num" data-count="52">0</span><span class="stat__label">Tsd. aktive Gamer</span></div>
+          <div class="stat"><span class="stat__num" data-count="120">0</span><span class="stat__label">Games unterstützt</span></div>
+          <div class="stat"><span class="stat__num" data-count="9">0</span><span class="stat__label">Sek. Matchmaking</span></div>
         </div>
       </div>
 
-      <!-- Animated burger -->
-      <div class="hero__burger" id="heroBurger" aria-hidden="true">
-        <div class="steam"><span></span><span></span><span></span></div>
-        <div class="burger">
-          <div class="burger__layer bun-top"></div>
-          <div class="burger__layer lettuce"></div>
-          <div class="burger__layer tomato"></div>
-          <div class="burger__layer cheese"></div>
-          <div class="burger__layer patty"></div>
-          <div class="burger__layer bun-bottom"></div>
-        </div>
-        <div class="hero__plate"></div>
+      <!-- Animated controller art -->
+      <div class="hero__art" id="heroArt" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <div class="hero__ring"></div>
+        <div class="pixels"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <svg class="gamepad-svg"><use href="#ic-controller"/></svg>
       </div>
 
-      <a href="#story" class="scroll-cue" aria-label="Weiter scrollen">
+      <a href="#how" class="scroll-cue" aria-label="Weiter scrollen">
         <span></span>
       </a>
     </section>
@@ -215,171 +232,223 @@
     <!-- ===== Marquee ===== -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>SMASH BURGER 🍔</span><span>CRISPY FRIES 🍟</span><span>MILKSHAKES 🥤</span>
-        <span>VEGAN OPTIONS 🌱</span><span>LOADED LOADED 🧀</span><span>HANDMADE 👐</span>
-        <span>SMASH BURGER 🍔</span><span>CRISPY FRIES 🍟</span><span>MILKSHAKES 🥤</span>
-        <span>VEGAN OPTIONS 🌱</span><span>LOADED LOADED 🧀</span><span>HANDMADE 👐</span>
+        <span>VALORANT</span><span>LEAGUE OF LEGENDS</span><span>CS2</span><span>FORTNITE</span>
+        <span>APEX LEGENDS</span><span>DOTA 2</span><span>ROCKET LEAGUE</span><span>OVERWATCH 2</span>
+        <span>VALORANT</span><span>LEAGUE OF LEGENDS</span><span>CS2</span><span>FORTNITE</span>
+        <span>APEX LEGENDS</span><span>DOTA 2</span><span>ROCKET LEAGUE</span><span>OVERWATCH 2</span>
       </div>
     </div>
 
-    <!-- ===== Story ===== -->
-    <section class="story section" id="story">
-      <div class="story__media" data-reveal>
-        <div class="story__card tilt">
-          <svg class="story__svg"><use href="#ic-burger"/></svg>
-          <div class="story__badge">Est. Großaitingen</div>
-        </div>
-        <div class="story__deco" aria-hidden="true"></div>
+    <!-- ===== How it works ===== -->
+    <section class="how section" id="how">
+      <div class="section__head">
+        <p class="kicker" data-reveal>So funktioniert's</p>
+        <h2 data-reveal>In drei Schritten zum <span class="hl">perfekten Team</span>.</h2>
+        <p class="section__lead" data-reveal>Kein endloses Suchen in Discord-Servern. Erstell dein Profil, lass dich matchen, leg los.</p>
       </div>
-      <div class="story__text">
-        <p class="kicker" data-reveal>Unsere Story</p>
-        <h2 data-reveal>Vom Pausenkick zum <span class="hl">Geschmacks&shy;treffer</span>.</h2>
-        <p data-reveal>
-          Penalty Burger ist aus einer einfachen Idee entstanden: ein Burger, der so gut ist,
-          dass er jeden Elfmeter verwandelt. Wir smashen unsere Patties auf der heißen Platte,
-          backen unsere Buns täglich frisch und setzen auf regionale Zutaten – ohne Schnickschnack,
-          dafür mit jeder Menge Geschmack.
-        </p>
-        <ul class="story__list" data-reveal>
-          <li>🥩 100&nbsp;% frisches Rindfleisch, nie eingefroren</li>
-          <li>🍞 Täglich frisch gebackene Brioche-Buns</li>
-          <li>🌱 Vegane &amp; vegetarische Alternativen</li>
-          <li>♻️ Nachhaltige Verpackung &amp; regionale Lieferanten</li>
-        </ul>
+
+      <div class="steps">
+        <article class="step" data-reveal>
+          <span class="step__num">01</span>
+          <svg class="step__svg" aria-hidden="true"><use href="#ic-users"/></svg>
+          <h3>Profil erstellen</h3>
+          <p>Gamertag, Lieblingsgames, Rang und Rolle eintragen. In unter einer Minute startklar.</p>
+        </article>
+        <article class="step" data-reveal>
+          <span class="step__num">02</span>
+          <svg class="step__svg" aria-hidden="true"><use href="#ic-bolt"/></svg>
+          <h3>Gematcht werden</h3>
+          <p>Unser Matchmaking findet Mitspieler auf deinem Skill-Level, in deiner Region und zu deiner Zeit.</p>
+        </article>
+        <article class="step" data-reveal>
+          <span class="step__num">03</span>
+          <svg class="step__svg" aria-hidden="true"><use href="#ic-trophy"/></svg>
+          <h3>Squad up &amp; gewinnen</h3>
+          <p>Springt in die Voice-Lobby, stimmt die Taktik ab und sichert euch den nächsten Win.</p>
+        </article>
       </div>
     </section>
 
-    <!-- ===== Menu ===== -->
-    <section class="menu section" id="menu">
+    <!-- ===== Games ===== -->
+    <section class="games section" id="games">
       <div class="section__head">
-        <p class="kicker" data-reveal>Speisekarte</p>
-        <h2 data-reveal>Wähl dein <span class="hl">Lieblings&shy;team</span>.</h2>
-        <p class="section__lead" data-reveal>Preise sind Platzhalter – bitte mit echten Werten ersetzen.</p>
+        <p class="kicker" data-reveal>Spiele</p>
+        <h2 data-reveal>Such dir dein <span class="hl">Game</span> aus.</h2>
+        <p class="section__lead" data-reveal>Spielerzahlen sind Beispielwerte – bitte mit echten Live-Daten ersetzen.</p>
       </div>
 
-      <div class="menu__tabs" id="menuTabs" role="tablist" data-reveal>
-        <button class="menu__tab is-active" data-filter="all" role="tab">Alle</button>
-        <button class="menu__tab" data-filter="burger" role="tab">Burger</button>
-        <button class="menu__tab" data-filter="sides" role="tab">Sides</button>
-        <button class="menu__tab" data-filter="drinks" role="tab">Drinks</button>
-        <button class="menu__tab" data-filter="vegan" role="tab">Vegan</button>
+      <div class="games__tabs" id="gamesTabs" role="tablist" data-reveal>
+        <button class="games__tab is-active" data-filter="all" role="tab">Alle</button>
+        <button class="games__tab" data-filter="fps" role="tab">FPS</button>
+        <button class="games__tab" data-filter="moba" role="tab">MOBA</button>
+        <button class="games__tab" data-filter="br" role="tab">Battle Royale</button>
+        <button class="games__tab" data-filter="sport" role="tab">Sport &amp; Co-op</button>
       </div>
 
-      <div class="menu__grid" id="menuGrid">
+      <div class="games__grid" id="gamesGrid">
         <!-- cards injected by JS -->
       </div>
     </section>
 
-    <!-- ===== Burger Builder ===== -->
-    <section class="builder section" id="builder">
+    <!-- ===== Squad Finder ===== -->
+    <section class="finder section" id="finder">
       <div class="section__head">
         <p class="kicker" data-reveal>Interaktiv</p>
-        <h2 data-reveal>Bau dir deinen <span class="hl">Penalty</span>.</h2>
-        <p class="section__lead" data-reveal>Klick die Zutaten an und sieh deinem Burger beim Wachsen zu.</p>
+        <h2 data-reveal>Bau dir dein <span class="hl">Dream-Squad</span>.</h2>
+        <p class="section__lead" data-reveal>Wähl Game, Rolle, Rang und Region – wir stellen dir ein passendes Team zusammen.</p>
       </div>
 
-      <div class="builder__wrap">
-        <div class="builder__stage" data-reveal>
-          <div class="builder__stack" id="builderStack">
-            <div class="bld-layer bun-top"></div>
-            <div class="bld-layer bun-bottom"></div>
+      <div class="finder__wrap">
+        <div class="finder__stage" data-reveal>
+          <div class="finder__roster" id="finderRoster">
+            <p class="finder__empty">Stell deine Auswahl ein und klick auf <strong>„Squad finden“</strong>.</p>
           </div>
-          <div class="builder__price">
-            <span>Dein Preis</span>
-            <strong id="builderPrice">€&nbsp;5,90</strong>
+          <div class="finder__score">
+            <span>Team-Synergie</span>
+            <strong id="finderScore">–</strong>
           </div>
         </div>
 
-        <div class="builder__controls" data-reveal>
-          <p class="builder__hint">Basis: Brioche-Bun + Salat &nbsp;·&nbsp; <em>5,90&nbsp;€</em></p>
-          <div class="builder__chips" id="builderChips"></div>
-          <button class="btn btn--primary builder__add" id="builderAdd">In den Warenkorb legen</button>
+        <div class="finder__controls" data-reveal>
+          <div class="finder__group">
+            <p class="finder__label">Game</p>
+            <div class="chips" id="finderGame" data-single></div>
+          </div>
+          <div class="finder__group">
+            <p class="finder__label">Deine Rolle</p>
+            <div class="chips" id="finderRole" data-single></div>
+          </div>
+          <div class="finder__group">
+            <p class="finder__label">Rang</p>
+            <div class="chips" id="finderRank" data-single></div>
+          </div>
+          <div class="finder__group">
+            <p class="finder__label">Region</p>
+            <div class="chips" id="finderRegion" data-single></div>
+          </div>
+          <button class="btn btn--primary finder__btn" id="finderBtn">🎯 Squad finden</button>
         </div>
       </div>
     </section>
 
-    <!-- ===== Gallery ===== -->
-    <section class="gallery section" id="galerie">
+    <!-- ===== Community / Features ===== -->
+    <section class="community section" id="community">
       <div class="section__head">
-        <p class="kicker" data-reveal>Galerie</p>
-        <h2 data-reveal>Augen auf, <span class="hl">Sabber</span> an.</h2>
+        <p class="kicker" data-reveal>Community</p>
+        <h2 data-reveal>Mehr als nur <span class="hl">Matchmaking</span>.</h2>
       </div>
-      <div class="gallery__grid">
-        <figure class="gallery__item parallax-img" data-speed="0.06"><span><svg class="food-svg"><use href="#ic-burger"/></svg></span></figure>
-        <figure class="gallery__item parallax-img" data-speed="0.1"><span><svg class="food-svg"><use href="#ic-fries"/></svg></span></figure>
-        <figure class="gallery__item parallax-img" data-speed="0.04"><span><svg class="food-svg"><use href="#ic-shake"/></svg></span></figure>
-        <figure class="gallery__item parallax-img" data-speed="0.12"><span><svg class="food-svg"><use href="#ic-cheese"/></svg></span></figure>
-        <figure class="gallery__item parallax-img" data-speed="0.07"><span><svg class="food-svg"><use href="#ic-chili"/></svg></span></figure>
-        <figure class="gallery__item parallax-img" data-speed="0.09"><span><svg class="food-svg"><use href="#ic-bacon"/></svg></span></figure>
+      <div class="features">
+        <article class="feature-card" data-reveal>
+          <svg class="feature-card__svg" aria-hidden="true"><use href="#ic-headset"/></svg>
+          <h3>Voice-Lobbies</h3>
+          <p>Direkter In-App-Voice-Chat, damit dein Squad sofort abgestimmt loslegen kann.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <svg class="feature-card__svg" aria-hidden="true"><use href="#ic-chat"/></svg>
+          <h3>LFG-Board</h3>
+          <p>Poste „Looking for Group“-Anzeigen oder finde offene Squads, die genau dich suchen.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <svg class="feature-card__svg" aria-hidden="true"><use href="#ic-medal"/></svg>
+          <h3>Skill-Ranking</h3>
+          <p>Verifizierte Ränge und ein faires MMR-System sorgen für ausgeglichene Matches.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <svg class="feature-card__svg" aria-hidden="true"><use href="#ic-trophy"/></svg>
+          <h3>Turniere</h3>
+          <p>Wöchentliche Community-Cups mit Preisen – meldet euch als Team an und tretet an.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <svg class="feature-card__svg" aria-hidden="true"><use href="#ic-shield"/></svg>
+          <h3>Fair Play</h3>
+          <p>Reputation-System, Reports und Moderation halten Toxicity und Cheater draußen.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <svg class="feature-card__svg" aria-hidden="true"><use href="#ic-bolt"/></svg>
+          <h3>Cross-Platform</h3>
+          <p>PC, Konsole oder Handy – TeamUp matcht plattformübergreifend, wo es das Game erlaubt.</p>
+        </article>
       </div>
     </section>
 
-    <!-- ===== Order CTA ===== -->
-    <section class="order section" id="order">
-      <div class="order__inner" data-reveal>
-        <h2>Hunger? <span class="hl">Anpfiff!</span></h2>
-        <p>Bestell direkt zu dir nach Hause oder reserviere deinen Tisch. Lieferung im Umkreis von 8&nbsp;km.</p>
-        <div class="order__actions">
-          <a href="#" class="btn btn--primary" data-toast="Lieferdienst-Link hier einfügen (z.&nbsp;B. Lieferando / Wolt).">🛵 Liefern lassen</a>
-          <a href="#besuch" class="btn btn--ghost">🪑 Tisch reservieren</a>
+    <!-- ===== CTA ===== -->
+    <section class="cta section" id="cta">
+      <div class="cta__inner" data-reveal>
+        <h2>Bereit für den nächsten <span class="hl">Win?</span></h2>
+        <p>Erstell dein Profil kostenlos und finde noch heute dein Squad. Keine Solo-Queue mehr.</p>
+        <div class="cta__actions">
+          <a href="#join" class="btn btn--primary">🚀 Kostenlos starten</a>
+          <a href="#" class="btn btn--ghost" data-toast="App-Store-Link hier einfügen (iOS / Android).">📱 App laden</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== Visit / Contact ===== -->
-    <section class="visit section" id="besuch">
-      <div class="visit__info">
-        <p class="kicker" data-reveal>Besuch uns</p>
-        <h2 data-reveal>Komm <span class="hl">vorbei</span>.</h2>
+    <!-- ===== Join / Contact ===== -->
+    <section class="join section" id="join">
+      <div class="join__info">
+        <p class="kicker" data-reveal>Mitmachen</p>
+        <h2 data-reveal>Werde Teil der <span class="hl">Community</span>.</h2>
 
-        <ul class="visit__details" data-reveal>
-          <li><span class="visit__ic">📍</span>
-            <div><strong>Adresse</strong><br />Westendweg 4<br />86845 Großaitingen</div>
+        <ul class="join__details" data-reveal>
+          <li><span class="join__ic">💬</span>
+            <div><strong>Discord</strong><br /><a href="#" data-toast="Discord-Einladungslink hier einfügen.">Tritt unserem Server bei</a></div>
           </li>
-          <li><span class="visit__ic">📞</span>
-            <div><strong>Telefon</strong><br /><a href="tel:+4917675776393">+49 176 75776393</a></div>
-          </li>
-          <li><span class="visit__ic">✉️</span>
+          <li><span class="join__ic">✉️</span>
             <div><strong>E-Mail</strong><br /><a href="mailto:hasretsanli5@gmail.com">hasretsanli5@gmail.com</a></div>
+          </li>
+          <li><span class="join__ic">🌐</span>
+            <div><strong>Social</strong><br /><a href="#" data-toast="Social-Media-Links hier einfügen.">Folge uns für Updates</a></div>
           </li>
         </ul>
 
-        <div class="hours" data-reveal>
-          <strong>Öffnungszeiten <em>(Platzhalter)</em></strong>
-          <table>
-            <tr><td>Mo – Do</td><td>16:00 – 22:00</td></tr>
-            <tr><td>Fr – Sa</td><td>12:00 – 23:00</td></tr>
-            <tr class="is-today" id="todayRow"><td>Sonntag</td><td>12:00 – 22:00</td></tr>
+        <div class="live" data-reveal>
+          <strong>Gerade live <em>(Demo-Werte)</em></strong>
+          <p class="live__count"><span class="live__dot"></span><span id="onlineCount">0</span> Gamer online</p>
+          <table id="onlineList">
+            <tr><td>Valorant</td><td data-base="12480">–</td></tr>
+            <tr><td>League of Legends</td><td data-base="9860">–</td></tr>
+            <tr><td>Apex Legends</td><td data-base="6210">–</td></tr>
           </table>
-          <span class="hours__status" id="openStatus">Status wird geprüft …</span>
         </div>
       </div>
 
-      <form class="visit__form" id="reserveForm" novalidate data-reveal>
-        <h3>Tisch reservieren</h3>
+      <form class="join__form" id="joinForm" novalidate data-reveal>
+        <h3>Erstelle dein Profil</h3>
         <div class="field">
-          <input type="text" id="rName" name="name" required placeholder=" " />
-          <label for="rName">Name</label>
+          <input type="text" id="jTag" name="gamertag" required placeholder=" " />
+          <label for="jTag">Gamertag</label>
         </div>
         <div class="field">
-          <input type="email" id="rMail" name="email" required placeholder=" " />
-          <label for="rMail">E-Mail</label>
+          <input type="email" id="jMail" name="email" required placeholder=" " />
+          <label for="jMail">E-Mail</label>
         </div>
-        <div class="field field--row">
+        <div class="field--row">
           <div class="field">
-            <input type="date" id="rDate" name="date" required placeholder=" " />
-            <label for="rDate" class="label--static">Datum</label>
+            <select id="jGame" name="game" required>
+              <option value="" disabled selected hidden></option>
+              <option>Valorant</option>
+              <option>League of Legends</option>
+              <option>CS2</option>
+              <option>Apex Legends</option>
+              <option>Fortnite</option>
+              <option>Rocket League</option>
+              <option>Overwatch 2</option>
+              <option>Sonstiges</option>
+            </select>
+            <label for="jGame" class="label--static">Haupt-Game</label>
           </div>
           <div class="field">
-            <input type="number" id="rGuests" name="guests" min="1" max="20" value="2" required placeholder=" " />
-            <label for="rGuests" class="label--static">Personen</label>
+            <select id="jRank" name="rank" required>
+              <option value="" disabled selected hidden></option>
+              <option>Anfänger</option>
+              <option>Fortgeschritten</option>
+              <option>Hardcore</option>
+              <option>Kompetitiv / Ranked</option>
+            </select>
+            <label for="jRank" class="label--static">Level</label>
           </div>
         </div>
-        <div class="field">
-          <textarea id="rMsg" name="message" rows="3" placeholder=" "></textarea>
-          <label for="rMsg">Nachricht (optional)</label>
-        </div>
-        <button type="submit" class="btn btn--primary btn--block">Reservierung absenden</button>
+        <button type="submit" class="btn btn--primary btn--block">Profil erstellen</button>
         <p class="form__note" id="formNote" role="status"></p>
       </form>
     </section>
@@ -389,24 +458,25 @@
   <footer class="footer">
     <div class="footer__top">
       <div class="footer__brand">
-        <span class="nav__logo-text">Penalty<strong>Burger</strong> ⚽</span>
-        <p>Handgemachte Burger aus Großaitingen. Frisch, ehrlich, ein Volltreffer.</p>
+        <span class="nav__logo-text">TeamUp<strong>Gamer</strong> 🎮</span>
+        <p>Die Plattform, die Gamer zusammenbringt. Finde dein Squad, spiel besser, hab mehr Spaß.</p>
       </div>
       <nav class="footer__nav" aria-label="Footer">
-        <a href="#menu">Speisekarte</a>
-        <a href="#besuch">Kontakt</a>
+        <a href="#games">Spiele</a>
+        <a href="#finder">Squad-Finder</a>
+        <a href="#join">Mitmachen</a>
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </nav>
       <div class="footer__social">
-        <a href="#" aria-label="Instagram" data-toast="Instagram-Link einfügen">📷</a>
-        <a href="#" aria-label="Facebook" data-toast="Facebook-Link einfügen">👍</a>
-        <a href="#" aria-label="TikTok" data-toast="TikTok-Link einfügen">🎵</a>
+        <a href="#" aria-label="Discord" data-toast="Discord-Link einfügen">💬</a>
+        <a href="#" aria-label="Twitch" data-toast="Twitch-Link einfügen">📺</a>
+        <a href="#" aria-label="X / Twitter" data-toast="X-/Twitter-Link einfügen">𝕏</a>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© <span id="year"></span> Penalty Burger · Alle Rechte vorbehalten.</span>
-      <span>Mit 🔥 gemacht.</span>
+      <span>© <span id="year"></span> TeamUp Gamer · Alle Rechte vorbehalten.</span>
+      <span>GG &amp; gut gespielt. 🕹️</span>
     </div>
   </footer>
 
