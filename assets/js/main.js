@@ -45,6 +45,7 @@
     toggle.setAttribute("aria-expanded", String(open));
   });
   $$("#navLinks a").forEach((a) => a.addEventListener("click", closeMenu));
+  $("#navClose")?.addEventListener("click", closeMenu);
 
   /* ---------- Scroll reveal ---------- */
   const io = new IntersectionObserver(
@@ -61,6 +62,35 @@
   $$("[data-reveal]").forEach((el, i) => {
     el.style.transitionDelay = (i % 5) * 70 + "ms";
     io.observe(el);
+  });
+
+  /* ---------- Count-up (dashboard stats) ---------- */
+  const countIO = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = +el.dataset.count;
+      const suffix = el.dataset.suffix || "";
+      const start = performance.now();
+      const dur = 1200;
+      const step = (now) => {
+        const p = Math.min((now - start) / dur, 1);
+        const val = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        el.textContent = val.toLocaleString("de-DE") + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+      countIO.unobserve(el);
+    });
+  });
+  $$("[data-count]").forEach((c) => countIO.observe(c));
+
+  /* ---------- FAQ accordion (single-open) ---------- */
+  const faqs = $$(".faq");
+  faqs.forEach((d) => {
+    d.addEventListener("toggle", () => {
+      if (d.open) faqs.forEach((o) => o !== d && (o.open = false));
+    });
   });
 
   /* ---------- Hero embers ---------- */

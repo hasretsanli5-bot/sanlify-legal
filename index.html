@@ -106,12 +106,15 @@
       <span class="nav__logo-text"><b>TEAMUP</b><i>GAMER</i></span>
     </a>
     <nav class="nav__links" id="navLinks" aria-label="Hauptnavigation">
-      <a href="#categories">Gildenfinder</a>
-      <a href="#categories">Sitzungsfinder</a>
-      <a href="#categories">M+ Gruppen</a>
-      <a href="#categories">PvP-Suche</a>
-      <a href="#featured">Premium</a>
-      <a href="#play" class="nav__cta">Jetzt loslegen</a>
+      <div class="nav__links-head">
+        <span class="nav__links-title">TeamUpGamer</span>
+        <button class="nav__close" id="navClose" aria-label="Menü schließen">✕</button>
+      </div>
+      <a href="#hero">Heimat</a>
+      <a href="#categories">Entdecken</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#subscribe" class="nav__cta">Abonnieren</a>
     </nav>
     <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -249,6 +252,139 @@
           <p>Dieser Platzhalter kann später durch deine echte Guild-Pro-Rotation ersetzt werden. Bis dahin hält er den Bereich sauber, premium und bereit für Live-Daten.</p>
           <div class="pro-tags"><span>Startseite</span><span>Spotlight</span></div>
           <a href="#" class="btn btn--ghost btn--block" data-toast="Guild Pro – hier verlinken.">Gilden erkunden</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Dashboard ===== -->
+    <section class="dash section" id="dashboard">
+      <div class="shead" data-reveal>
+        <h2>Dein Dashboard</h2>
+        <p>Behalte deine Gilde, Bewerbungen und Gruppen an einem Ort im Blick.</p>
+      </div>
+
+      <div class="dash__panel" data-reveal>
+        <aside class="dash__side">
+          <span class="dash__brand"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#ic-emblem"/></svg>TeamUpGamer</span>
+          <nav class="dash__nav">
+            <a class="is-active" href="#dashboard">Übersicht</a>
+            <a href="#categories">Meine Gilde</a>
+            <a href="#categories">Bewerbungen</a>
+            <a href="#categories">Gruppen</a>
+            <a href="#categories">Nachrichten</a>
+          </nav>
+        </aside>
+
+        <div class="dash__main">
+          <div class="dash__stats">
+            <div class="dstat"><span class="dstat__label">Mythic+ Score</span><strong class="dstat__num" data-count="2480">0</strong></div>
+            <div class="dstat"><span class="dstat__label">Offene Bewerbungen</span><strong class="dstat__num" data-count="4">0</strong></div>
+            <div class="dstat"><span class="dstat__label">Gilden gefolgt</span><strong class="dstat__num" data-count="7">0</strong></div>
+            <div class="dstat"><span class="dstat__label">Match-Score</span><strong class="dstat__num" data-count="92" data-suffix="%">0</strong></div>
+          </div>
+
+          <div class="dash__list">
+            <div class="dash__list-head"><span>Empfohlene Gruppen</span><span>Für dich gematcht</span></div>
+            <div class="grow">
+              <span class="grow__ic" data-role="Tank">T</span>
+              <div class="grow__main"><b>Mythic+ Schlüsselstein +18</b><small>Sucht Tank · heute 20:00 · EU</small></div>
+              <a href="#" class="btn btn--ghost btn--sm" data-toast="Gruppen-Beitritt – hier verlinken.">Beitreten</a>
+            </div>
+            <div class="grow">
+              <span class="grow__ic" data-role="Heal">H</span>
+              <div class="grow__main"><b>Heroischer Raid – Stammgruppe</b><small>Sucht Heiler · Mi & So · 2/9 HC</small></div>
+              <a href="#" class="btn btn--ghost btn--sm" data-toast="Gruppen-Beitritt – hier verlinken.">Beitreten</a>
+            </div>
+            <div class="grow">
+              <span class="grow__ic" data-role="DPS">D</span>
+              <div class="grow__main"><b>Rated BG – Push auf 1800</b><small>Sucht DPS · Wochenende · Disc Pflicht</small></div>
+              <a href="#" class="btn btn--ghost btn--sm" data-toast="Gruppen-Beitritt – hier verlinken.">Beitreten</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQs ===== -->
+    <section class="faqs section" id="faqs">
+      <div class="shead" data-reveal>
+        <h2>Häufige Fragen</h2>
+        <p>Alles, was du über TeamUpGamer wissen musst.</p>
+      </div>
+
+      <div class="faq-list" data-reveal>
+        <details class="faq">
+          <summary>Was ist TeamUpGamer?<span class="faq__sign"></span></summary>
+          <div class="faq__a"><p>TeamUpGamer ist eine Plattform, die Spieler zusammenbringt: Finde Gilden, baue Mythic+-Teams auf, suche PvP-Partner oder springe in schnelle Sitzungen – mit Leuten, die zu deinen Zielen und deinem Spielstil passen.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Welches Spiel wird unterstützt?<span class="faq__sign"></span></summary>
+          <div class="faq__a"><p>Der Fokus liegt aktuell auf World of Warcraft – von Gildenrekrutierung über Mythic+ bis zu Arena und Rated Battlegrounds. Weitere Spiele sind für die Zukunft geplant.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Ist TeamUpGamer kostenlos?<span class="faq__sign"></span></summary>
+          <div class="faq__a"><p>Ja. Profil erstellen, Gilden und Gruppen finden sowie Bewerbungen senden sind kostenlos. Optionale Premium- und Guild-Pro-Pläne schalten erweiterte Funktionen und mehr Sichtbarkeit frei.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Wie funktioniert das Matchmaking?<span class="faq__sign"></span></summary>
+          <div class="faq__a"><p>Du gibst deine Rolle, Wertung, Ziele und Spielzeiten an. Das Smart-Matching schlägt dir Gilden und Gruppen vor, deren Anforderungen und Zeitfenster zu deinem Profil passen.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Was bringt Guild Pro?<span class="faq__sign"></span></summary>
+          <div class="faq__a"><p>Guild Pro hebt deine Gilde direkt auf der Startseite hervor – mit einem Spotlight-Slot, höherer Sichtbarkeit und Rekrutierungstools, damit du die richtigen Spieler schneller erreichst.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Ist TeamUpGamer mit Blizzard verbunden?<span class="faq__sign"></span></summary>
+          <div class="faq__a"><p>Nein. TeamUpGamer ist ein unabhängiges Fan-Projekt und nicht mit Blizzard Entertainment verbunden. World of Warcraft® ist ein Warenzeichen von Blizzard Entertainment, Inc.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== Subscribe ===== -->
+    <section class="subscribe section" id="subscribe">
+      <div class="shead" data-reveal>
+        <h2>Wähle deinen Plan</h2>
+        <p>Starte kostenlos – oder hol dir mehr Sichtbarkeit und Komfort. <em>Preise sind Platzhalter.</em></p>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan" data-reveal>
+          <h3>Kostenlos</h3>
+          <p class="plan__price">0&nbsp;€<span>/Monat</span></p>
+          <ul>
+            <li>Profil erstellen</li>
+            <li>Gilden &amp; Gruppen finden</li>
+            <li>Bewerbungen senden</li>
+            <li>Community-Zugang</li>
+          </ul>
+          <a href="#" class="btn btn--ghost btn--block" data-toast="Registrierung – hier verlinken.">Loslegen</a>
+        </article>
+
+        <article class="plan plan--featured" data-reveal>
+          <span class="plan__badge">Beliebt</span>
+          <h3>Premium</h3>
+          <p class="plan__price">4,99&nbsp;€<span>/Monat</span></p>
+          <ul>
+            <li>Alles aus Kostenlos</li>
+            <li>Erweiterte Filter</li>
+            <li>Prioritäts-Matching</li>
+            <li>Premium-Abzeichen</li>
+            <li>Werbefrei</li>
+          </ul>
+          <a href="#" class="btn btn--gold btn--block" data-toast="Premium abonnieren – hier verlinken.">Premium holen</a>
+        </article>
+
+        <article class="plan" data-reveal>
+          <h3>Guild Pro</h3>
+          <p class="plan__price">14,99&nbsp;€<span>/Monat</span></p>
+          <ul>
+            <li>Vorgestellter Gilden-Slot</li>
+            <li>Gilden-Analytics</li>
+            <li>Rekrutierungstools</li>
+            <li>Spotlight-Rotation</li>
+            <li>Prioritäts-Support</li>
+          </ul>
+          <a href="#" class="btn btn--ghost btn--block" data-toast="Guild Pro abonnieren – hier verlinken.">Guild Pro holen</a>
         </article>
       </div>
     </section>
