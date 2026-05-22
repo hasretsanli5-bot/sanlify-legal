@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AUGSBURG ABBRUCH — Wir schaffen Platz für Neues</title>
@@ -102,6 +103,7 @@
     min-height:100vh;
     overflow:hidden;
     display:flex;align-items:center;
+    background:#161616;            /* dark fallback if slide images don't load */
   }
   .hero-slider{
     position:absolute;inset:0;
@@ -109,6 +111,7 @@
   }
   .slide{
     position:absolute;inset:0;
+    background-color:#1a1a1a;      /* dark fallback behind each slide */
     opacity:0;
     transition:opacity 1.5s ease;
     background-size:cover;
@@ -528,6 +531,24 @@
     transition:opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1);
   }
   .reveal.in{opacity:1;transform:translateY(0)}
+
+  /* ---------- No-JS / reduced-motion fallback: show everything ---------- */
+  html:not(.js) .hero-tag,
+  html:not(.js) .hero-logo,
+  html:not(.js) .hero-sub,
+  html:not(.js) .hero-cta-row,
+  html:not(.js) h1 .line span,
+  html:not(.js) .reveal{
+    opacity:1 !important;
+    transform:none !important;
+    animation:none !important;
+  }
+  @media (prefers-reduced-motion:reduce){
+    .hero-tag,.hero-logo,.hero-sub,.hero-cta-row,h1 .line span,.reveal{
+      opacity:1 !important;transform:none !important;animation:none !important;
+    }
+    .slide{animation:none !important}
+  }
 
   /* ---------- Mobile ---------- */
   @media (max-width:768px){
