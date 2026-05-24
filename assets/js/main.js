@@ -1,4 +1,4 @@
-/* ============ Penalty Burger – Interaktivität ============ */
+/* ============ TeamUp Gamer – Interaktivität ============ */
 (function () {
   "use strict";
   const $ = (s, c = document) => c.querySelector(s);
@@ -12,6 +12,33 @@
 
   /* ---------- Year ---------- */
   $("#year").textContent = new Date().getFullYear();
+
+  /* ---------- Particles in hero ---------- */
+  const particles = $("#particles");
+  if (particles && !reduceMotion) {
+    const N = 24;
+    for (let i = 0; i < N; i++) {
+      const p = document.createElement("span");
+      const size = 2 + Math.random() * 5;
+      p.style.width = p.style.height = size + "px";
+      p.style.left = Math.random() * 100 + "%";
+      p.style.animationDuration = 10 + Math.random() * 18 + "s";
+      p.style.animationDelay = -Math.random() * 20 + "s";
+      p.style.opacity = (0.3 + Math.random() * 0.6).toFixed(2);
+      const hue = Math.random() > 0.5 ? "var(--brand-2)" : "var(--accent)";
+      p.style.background = hue;
+      p.style.boxShadow = `0 0 ${4 + Math.random() * 8}px ${hue}`;
+      particles.appendChild(p);
+    }
+  }
+
+  /* ---------- Cursor glow ---------- */
+  const glow = $("#cursorGlow");
+  if (glow && !reduceMotion && matchMedia("(pointer:fine)").matches) {
+    window.addEventListener("mousemove", (e) => {
+      glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+    });
+  }
 
   /* ---------- Nav: scroll state + progress + to-top ---------- */
   const nav = $("#nav");
@@ -69,7 +96,7 @@
       if (!e.isIntersecting) return;
       const el = e.target;
       const target = +el.dataset.count;
-      const dur = 1200;
+      const dur = 1400;
       const start = performance.now();
       const step = (now) => {
         const p = Math.min((now - start) / dur, 1);
@@ -82,13 +109,13 @@
   });
   counters.forEach((c) => countIO.observe(c));
 
-  /* ---------- Hero burger parallax ---------- */
-  const heroBurger = $("#heroBurger");
-  if (heroBurger && !reduceMotion) {
+  /* ---------- Hero scene parallax ---------- */
+  const heroScene = $("#heroScene");
+  if (heroScene && !reduceMotion) {
     window.addEventListener("mousemove", (e) => {
-      const x = (e.clientX / innerWidth - 0.5) * 16;
-      const y = (e.clientY / innerHeight - 0.5) * 16;
-      heroBurger.style.transform = `translate(${x}px, ${y}px)`;
+      const x = (e.clientX / innerWidth - 0.5) * 18;
+      const y = (e.clientY / innerHeight - 0.5) * 18;
+      heroScene.style.setProperty("transform", `translate(${x}px, ${y}px)`);
     });
   }
 
@@ -111,40 +138,42 @@
     );
   }
 
-  /* ---------- Menu data + render ---------- */
-  const MENU = [
-    { cat: "burger", icon: "burger", name: "Klassiker Penalty", price: "8,90", desc: "Smash-Patty, Cheddar, Salat, Tomate, hausgemachte Penalty-Sauce.", tags: ["Bestseller"] },
-    { cat: "burger", icon: "cheese", name: "Double Cheese Strike", price: "11,50", desc: "Zwei Patties, doppelt Cheddar, karamellisierte Zwiebeln.", tags: [] },
-    { cat: "burger", icon: "bacon", name: "Bacon Bomb", price: "12,90", desc: "Crispy Bacon, BBQ-Sauce, Röstzwiebeln, Cheddar.", tags: [] },
-    { cat: "burger", icon: "chili", name: "El Diablo", price: "11,90", desc: "Jalapeños, Chili-Mayo, Pepper-Jack – nur für Mutige.", tags: ["scharf"], hot: true },
-    { cat: "burger", icon: "burger", name: "Crispy Chicken", price: "10,90", desc: "Knuspriges Hähnchen, Coleslaw, Honig-Senf.", tags: [] },
-    { cat: "vegan", icon: "leaf", name: "Green Goal (vegan)", price: "10,50", desc: "Pflanzenpatty, vegane Mayo, Avocado, Rucola.", tags: ["vegan"], veg: true },
-    { cat: "vegan", icon: "leaf", name: "Veggie Portobello", price: "9,90", desc: "Gegrillter Portobello, gegrillte Paprika, Pesto.", tags: ["vegetarisch"], veg: true },
-    { cat: "sides", icon: "fries", name: "Penalty Fries", price: "3,90", desc: "Knusprige Pommes mit Meersalz & Dip nach Wahl.", tags: [] },
-    { cat: "sides", icon: "fries", name: "Loaded Cheese Fries", price: "5,90", desc: "Pommes, Cheddar-Sauce, Bacon-Bits, Frühlingszwiebeln.", tags: [] },
-    { cat: "sides", icon: "cheese", name: "Onion Rings", price: "4,50", desc: "Goldene Zwiebelringe im Bierteig.", tags: [] },
-    { cat: "sides", icon: "leaf", name: "House Salad", price: "5,50", desc: "Frischer Blattsalat, Cherrytomaten, Dressing.", tags: ["vegetarisch"], veg: true },
-    { cat: "drinks", icon: "drink", name: "Hausgemachte Limo", price: "3,50", desc: "Zitrone-Minze oder Maracuja, frisch gemacht.", tags: [] },
-    { cat: "drinks", icon: "shake", name: "Milkshake", price: "4,90", desc: "Vanille, Schoko oder Erdbeere – cremig & kalt.", tags: [] },
-    { cat: "drinks", icon: "drink", name: "Craft Beer", price: "4,20", desc: "Wechselndes regionales Bier vom Fass.", tags: [] },
+  /* ---------- Games (menu) data + render ---------- */
+  const GAMES = [
+    { cat: "fps",  icon: "crosshair", name: "Valorant",          players: "32,4K", desc: "Taktischer 5v5-Shooter. Agents, Abilities, präzises Gunplay.",      tags: ["Bestseller","Ranked"] },
+    { cat: "fps",  icon: "swords",    name: "Counter-Strike 2",  players: "18,7K", desc: "Der Klassiker. Premier-Mode, Wingman & klassisches Comp.",             tags: ["Tryhard"], hot: true },
+    { cat: "fps",  icon: "shield",    name: "Overwatch 2",       players: "12,1K", desc: "Hero-Shooter mit Tank, DPS und Support – Teamspiel pur.",              tags: ["Hero","Comp"] },
+    { cat: "fps",  icon: "rocket",    name: "Call of Duty: WZ",  players: "21,5K", desc: "Schnelles BR-Gunplay, Custom-Loadouts, große Squads.",                 tags: ["BR"] },
+    { cat: "moba", icon: "trophy",    name: "League of Legends", players: "44,9K", desc: "5v5-MOBA – 168+ Champions, Flex- & Solo/Duo-Queue.",                   tags: ["Bestseller"] },
+    { cat: "moba", icon: "bolt",      name: "Dota 2",            players: "9,3K",  desc: "Der Tiefenschnitt. Hochkomplexes Drafting, ewige Meta.",               tags: ["Pro"] },
+    { cat: "br",   icon: "ghost",     name: "Apex Legends",      players: "16,8K", desc: "Squad-basierter Battle Royale mit Movement und Legends.",              tags: ["Squad-Sync"] },
+    { cat: "br",   icon: "crown",     name: "Fortnite",          players: "28,2K", desc: "Build, Zone, Win. Solos, Duos, Squads & Zero-Build.",                  tags: ["Casual","Comp"] },
+    { cat: "br",   icon: "rocket",    name: "PUBG",              players: "7,9K",  desc: "Der OG-Realismus-BR. Großkarten, Vehicles, Loot.",                     tags: ["Tactical"] },
+    { cat: "coop", icon: "controller",name: "Rocket League",     players: "11,4K", desc: "Auto-Soccer. 2v2 oder 3v3 mit Boost-Action.",                          tags: ["Coop","Comp"] },
+    { cat: "coop", icon: "dice",      name: "Minecraft",         players: "19,1K", desc: "Survival, Creative, Modpacks – baut Welten zusammen.",                 tags: ["Sandbox","Chill"] },
+    { cat: "mmo",  icon: "heart",     name: "World of Warcraft", players: "14,6K", desc: "Raids, Mythic+, Arena – findet eure Gilde oder Stammgruppe.",          tags: ["Raid","M+"] },
   ];
 
   const grid = $("#menuGrid");
-  const renderMenu = (filter = "all") => {
+  const renderGames = (filter = "all") => {
     grid.innerHTML = "";
-    MENU.filter((m) => filter === "all" || m.cat === filter || (filter === "vegan" && m.veg)).forEach((m) => {
+    GAMES.filter((m) => filter === "all" || m.cat === filter).forEach((m) => {
       const card = document.createElement("article");
       card.className = "menu-card";
       const tags = (m.tags || [])
         .map((t) => {
-          const cls = m.hot ? "tag tag--hot" : m.veg ? "tag tag--veg" : "tag";
+          const cls = /scharf|hot|tryhard/i.test(t) || m.hot
+            ? "tag tag--hot"
+            : /chill|casual/i.test(t)
+            ? "tag tag--veg"
+            : "tag";
           return `<span class="${cls}">${t}</span>`;
         })
         .join("");
       card.innerHTML = `
         <div class="menu-card__top">
           <svg class="menu-card__svg" aria-hidden="true"><use href="#ic-${m.icon}"/></svg>
-          <span class="menu-card__price">€&nbsp;${m.price}</span>
+          <span class="menu-card__price" title="Aktuell online">${m.players}</span>
         </div>
         <h3>${m.name}</h3>
         <p>${m.desc}</p>
@@ -157,89 +186,124 @@
       grid.appendChild(card);
     });
   };
-  renderMenu();
+  renderGames();
 
   $$(".menu__tab").forEach((tab) => {
     tab.addEventListener("click", () => {
       $$(".menu__tab").forEach((t) => t.classList.remove("is-active"));
       tab.classList.add("is-active");
-      renderMenu(tab.dataset.filter);
+      renderGames(tab.dataset.filter);
     });
   });
 
-  /* ---------- Burger builder ---------- */
-  const BASE = 5.9;
-  const INGREDIENTS = [
-    { id: "patty", label: "Patty", emoji: "🥩", price: 2.5 },
-    { id: "kaese", label: "Käse", emoji: "🧀", price: 1.0 },
-    { id: "bacon", label: "Bacon", emoji: "🥓", price: 1.5 },
-    { id: "tomate", label: "Tomate", emoji: "🍅", price: 0.5 },
-    { id: "zwiebel", label: "Zwiebeln", emoji: "🧅", price: 0.5 },
-    { id: "ei", label: "Spiegelei", emoji: "🍳", price: 1.2 },
+  /* ---------- Match-Finder (builder) ---------- */
+  const CHIPS = {
+    game: ["Valorant","CS2","League","Apex","Fortnite","Overwatch 2","Dota 2","Rocket League"],
+    role: ["Duelist","Tank","Support","Sniper","Jungler","Mid","ADC","Flex"],
+    rank: ["Iron","Bronze","Silver","Gold","Plat","Diamond","Master","Pro"],
+  };
+  const POOL = [
+    { name: "nox.runner",   icon: "ghost",     meta: "DE · 22 J · Mic" },
+    { name: "Mira_K",       icon: "headset",   meta: "AT · 24 J · Mic" },
+    { name: "Kaan_07",      icon: "bolt",      meta: "DE · 19 J · Mic" },
+    { name: "SilberStern",  icon: "shield",    meta: "DE · 27 J · Mic" },
+    { name: "VoidJay",      icon: "swords",    meta: "CH · 21 J · Mic" },
+    { name: "Pixelpilot",   icon: "rocket",    meta: "DE · 25 J · Mic" },
+    { name: "EmberWolf",    icon: "crown",     meta: "DE · 20 J · Mic" },
+    { name: "SerenaQ",      icon: "trophy",    meta: "AT · 23 J · Mic" },
+    { name: "rxnke",        icon: "controller",meta: "DE · 26 J · Mic" },
   ];
-  const chosen = [];
-  const chipsWrap = $("#builderChips");
-  const stack = $("#builderStack");
+
+  const state = { game: "Valorant", role: "Flex", rank: "Gold" };
+
+  const buildChips = (groupName) => {
+    const wrap = $(`#chips${groupName[0].toUpperCase()}${groupName.slice(1)}`);
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    CHIPS[groupName].forEach((v) => {
+      const c = document.createElement("button");
+      c.type = "button";
+      c.className = "chip" + (state[groupName] === v ? " active" : "");
+      c.textContent = v;
+      c.addEventListener("click", () => {
+        state[groupName] = v;
+        wrap.querySelectorAll(".chip").forEach((x) => x.classList.remove("active"));
+        c.classList.add("active");
+        renderMatches();
+      });
+      wrap.appendChild(c);
+    });
+  };
+  ["game", "role", "rank"].forEach(buildChips);
+
+  const matchesEl = $("#builderMatches");
   const priceEl = $("#builderPrice");
 
-  const fmt = (n) => "€ " + n.toFixed(2).replace(".", ",");
-  const renderStack = () => {
-    stack.innerHTML = '<div class="bld-layer bun-top"></div><div class="bld-layer bun-bottom"></div>';
-    const bunTop = $(".bun-top", stack);
-    // insert chosen layers between top and bottom (column-reverse, so order matters)
-    chosen.forEach((id) => {
-      const layer = document.createElement("div");
-      layer.className = "bld-layer " + id;
-      stack.insertBefore(layer, bunTop);
-    });
-  };
-  const updatePrice = () => {
-    const total = BASE + chosen.reduce((s, id) => s + (INGREDIENTS.find((i) => i.id === id)?.price || 0), 0);
-    priceEl.textContent = fmt(total);
+  const hash = (s) => {
+    let h = 0;
+    for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+    return h;
   };
 
-  INGREDIENTS.forEach((ing) => {
-    const chip = document.createElement("button");
-    chip.type = "button";
-    chip.className = "chip";
-    chip.innerHTML = `${ing.emoji} ${ing.label} <small>+${fmt(ing.price)}</small>`;
-    chip.addEventListener("click", () => {
-      const idx = chosen.indexOf(ing.id);
-      if (idx >= 0) chosen.splice(idx, 1);
-      else chosen.push(ing.id);
-      chip.classList.toggle("active");
-      renderStack();
-      updatePrice();
-    });
-    chipsWrap.appendChild(chip);
-  });
-  renderStack();
-  updatePrice();
+  const renderMatches = () => {
+    const seed = hash(state.game + state.role + state.rank);
+    // pick 3 deterministic players from POOL based on seed
+    const picks = [];
+    for (let i = 0; i < 3; i++) {
+      picks.push(POOL[(seed + i * 7) % POOL.length]);
+    }
+    matchesEl.innerHTML = picks
+      .map(
+        (p) => `
+        <div class="match-row">
+          <span class="match-row__av"><svg><use href="#ic-${p.icon}"/></svg></span>
+          <div>
+            <span class="match-row__name">${p.name}</span>
+            <span class="match-row__meta">${state.role} · ${p.meta}</span>
+          </div>
+          <span class="match-row__rank">${state.rank}</span>
+        </div>`
+      )
+      .join("");
+    // "online count" – fake but consistent
+    const count = 12 + (seed % 84);
+    let n = 0;
+    const target = count;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min((now - start) / 700, 1);
+      n = Math.round(target * (1 - Math.pow(1 - p, 3)));
+      priceEl.textContent = n;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  renderMatches();
 
   $("#builderAdd").addEventListener("click", () => {
-    const extras = chosen.length ? chosen.length + " Extra(s)" : "ohne Extras";
-    showToast(`Dein Burger (${extras}) liegt im Warenkorb – Bestellung folgt im Checkout.`);
+    showToast(`🚀 Quick-Match gestartet: <b>${state.game}</b> · ${state.role} · ${state.rank}. Wir suchen deine Crew …`);
   });
 
-  /* ---------- Opening-hours status (demo) ---------- */
-  // Platzhalter-Zeiten: [openHour, closeHour] je Wochentag (0=So)
-  const HOURS = { 0: [12, 22], 1: [16, 22], 2: [16, 22], 3: [16, 22], 4: [16, 22], 5: [12, 23], 6: [12, 23] };
+  /* ---------- Opening-hours status (support hours) ---------- */
+  // [openHour, closeHour] je Wochentag (0=So)
+  const HOURS = { 0: [12, 24], 1: [10, 22], 2: [10, 22], 3: [10, 22], 4: [10, 22], 5: [10, 22], 6: [12, 24] };
+  const DAY_LABEL = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
   const statusEl = $("#openStatus");
-  if (statusEl) {
+  const todayRow = $("#todayRow");
+  if (statusEl && todayRow) {
     const now = new Date();
     const h = now.getHours() + now.getMinutes() / 60;
     const [o, c] = HOURS[now.getDay()];
     const open = h >= o && h < c;
-    statusEl.textContent = open ? "● Jetzt geöffnet" : "● Aktuell geschlossen";
+    statusEl.textContent = open ? "Support jetzt online" : "Support aktuell offline";
     statusEl.classList.add(open ? "open" : "closed");
+    todayRow.querySelector("td:first-child").textContent = DAY_LABEL[now.getDay()];
+    todayRow.querySelector("td:last-child").textContent = `${String(o).padStart(2,"0")}:00 – ${String(c).padStart(2,"0")}:00`;
   }
 
-  /* ---------- Reservation form ---------- */
+  /* ---------- Beta form ---------- */
   const form = $("#reserveForm");
   const note = $("#formNote");
-  // min date = today
-  const dateInput = $("#rDate");
-  if (dateInput) dateInput.min = new Date().toISOString().split("T")[0];
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -251,11 +315,26 @@
       return;
     }
     const name = $("#rName").value.trim();
-    note.textContent = `Danke, ${name}! Deine Reservierungsanfrage ist eingegangen – wir melden uns per E-Mail.`;
+    note.textContent = `GG, ${name}! Dein Beta-Slot ist reserviert – Invite kommt per E-Mail.`;
     note.classList.add("ok");
     form.reset();
-    showToast("Reservierung gesendet ✓ (Demo – keine echte Übertragung)");
+    showToast("✓ Beta-Anfrage gesendet (Demo – noch keine echte Übertragung).");
   });
+
+  /* ---------- Magnetic buttons ---------- */
+  if (!reduceMotion) {
+    $$(".magnetic").forEach((btn) => {
+      btn.addEventListener("mousemove", (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${x * 0.18}px, ${y * 0.25}px) translateY(-3px)`;
+      });
+      btn.addEventListener("mouseleave", () => {
+        btn.style.transform = "";
+      });
+    });
+  }
 
   /* ---------- Toast (also for data-toast links) ---------- */
   const toastEl = $("#toast");
